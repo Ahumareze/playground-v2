@@ -1,9 +1,10 @@
-import ThreeJsCan from './pages/threeJsCan/ThreeJsCan'
+import SectionsTransitions from './pages/sectionsTransition/SectionsTransitions'
+// import ThreeJsCan from './pages/threeJsCan/ThreeJsCan'
 
 function App() {
 
   return (
-    <ThreeJsCan />
+    <SectionsTransitions />
   )
 }
 
