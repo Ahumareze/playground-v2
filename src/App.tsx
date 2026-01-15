@@ -1,10 +1,9 @@
-import SectionsTransitions from './pages/sectionsTransition/SectionsTransitions'
-// import ThreeJsCan from './pages/threeJsCan/ThreeJsCan'
+import Slider from "./pages/slider/Slider"
 
 function App() {
 
   return (
-    <SectionsTransitions />
+    <Slider />
   )
 }
 
