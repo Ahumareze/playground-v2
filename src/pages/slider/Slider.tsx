@@ -3,6 +3,7 @@ import { useState, useRef, useLayoutEffect, useEffect } from "react"
 import { sliderData } from "../../constants/sliderData";
 import SplitText from "gsap/SplitText";
 import gsap from "gsap";
+import { FiArrowRight, FiArrowLeft } from 'react-icons/fi'
 
 gsap.registerPlugin(SplitText);
 
@@ -41,8 +42,8 @@ export default function Slider(){
     const item = sliderData[selectedIndex];
 
     return(
-        <div className="h-screen w-full overflow-hidden">
-            <div className="w-[600px] h-[500px] border border-black mx-auto mt-20 relative">
+        <div className="h-screen w-full overflow-hidden bg-linear-to-b from-[#FDBA74] to-[#EC4899]">
+            <div className="w-[600px] h-[550px] border border-black mx-auto mt-20 relative rounded-3xl shadow-lg bg-white">
                 <AnimatePresence mode="wait">
                     <ItemContainer
                         key={item.title}
@@ -53,9 +54,9 @@ export default function Slider(){
                     />
                 </AnimatePresence>
             </div>
-            <div className="w-[600px] mx-auto flex items-center justify-between">
-                <button className="h-[45px] w-fit px-10 rounded-full bg-black text-white cursor-pointer" onClick={handleBack}>Back</button>
-                <button className="h-[45px] w-fit px-10 rounded-full bg-black text-white cursor-pointer" onClick={handleNext}>Next</button>
+            <div className="w-[600px] mx-auto flex items-center justify-between pt-10">
+                <button className="h-[45px] w-fit px-6 rounded-full bg-black text-white cursor-pointer flex items-center gap-2" onClick={handleBack}><FiArrowLeft size={20} /> Prev</button>
+                <button className="h-[45px] w-fit px-6 rounded-full bg-black text-white cursor-pointer flex items-center gap-2" onClick={handleNext}>Next <FiArrowRight size={20} /> </button>
             </div>
         </div>
     )
